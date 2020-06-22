@@ -14,10 +14,6 @@ class Team
    end 
 
    def find_player_by_name(name)
-        if (@players.find { |player| player = @players } != nil)
-            return true
-            else
-            return false
-        end
+    return @players.any?(name)
    end
 end

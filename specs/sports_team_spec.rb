@@ -40,4 +40,9 @@ class TestCodeclanStudents < Minitest::Test
         team = Team.new("Programmers", ["James", "Kayley", "John", "Adam"], "Bruce")
         assert_equal(true, team.find_player_by_name("James"))
     end
+
+    def test_find_player_by_name_not_found
+        team = Team.new("Programmers", ["James", "Kayley", "John", "Adam"], "Bruce")
+        assert_equal(false, team.find_player_by_name("Lisa"))
+    end
 end
