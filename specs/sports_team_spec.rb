@@ -23,4 +23,10 @@ class TestCodeclanStudents < Minitest::Test
 
         assert_equal("Bruce", team.coach)
     end
+
+    def test_set_coach_name
+        team = Team.new("Programmers", ["James", "Kayley", "John", "Adam"], "Bruce")
+        team.set_coach_name("Kim")
+        assert_equal("Kim", team.coach)
+    end
 end
