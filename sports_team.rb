@@ -12,4 +12,12 @@ class Team
    def add_player(player)
      @players << player
    end 
+
+   def find_player_by_name(name)
+        if (@players.find { |player| player = @players } != nil)
+            return true
+            else
+            return false
+        end
+   end
 end

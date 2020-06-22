@@ -35,4 +35,9 @@ class TestCodeclanStudents < Minitest::Test
         team.add_player("Calvin")
         assert_equal(["James", "Kayley", "John", "Adam", "Calvin"], team.players)
     end
+
+    def test_find_player_by_name_found
+        team = Team.new("Programmers", ["James", "Kayley", "John", "Adam"], "Bruce")
+        assert_equal(true, team.find_player_by_name("James"))
+    end
 end
